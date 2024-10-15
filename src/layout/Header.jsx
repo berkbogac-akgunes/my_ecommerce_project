@@ -13,10 +13,10 @@ export function Header() {
                     <h3 className = "mont font-bold text-2xl text-[#252B42] ml-9 mt-9">BB Butik</h3>
                   </div>
                   <div className = "flex justify-end text-2xl text-[#252B42] mr-9 mt-9 gap-6">
-                    <FontAwesomeIcon icon={faUser} />
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <FontAwesomeIcon icon={faCartShopping} />
-                    <FontAwesomeIcon icon={faBars} />
+                  <NavLink to=""><FontAwesomeIcon icon={faUser} /></NavLink>
+                  <NavLink to=""><FontAwesomeIcon icon={faMagnifyingGlass} /></NavLink>
+                  <NavLink to=""><FontAwesomeIcon icon={faCartShopping} /></NavLink>
+                  <NavLink to=""><FontAwesomeIcon icon={faBars} /></NavLink>
                   </div>
                 </div>
                 <div>
