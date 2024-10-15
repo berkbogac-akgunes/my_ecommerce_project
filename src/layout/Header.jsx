@@ -1,32 +1,16 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCartShopping, faMagnifyingGlass, faUser} from '@fortawesome/free-solid-svg-icons'
-import { NavLink } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Slider } from '../components/Slider';
+import { MobileHeaderMenu } from '../components/MobileHeaderMenu';
+import { DesktopHeaderMenu } from '../components/DesktopHeaderMenu';
 
 export function Header() {
     return(
         <header>
-            <section className = "nav-section">
-                <div className = "flex justify-between">
-                  <div>
-                    <h3 className = "mont font-bold text-2xl text-[#252B42] ml-9 mt-9">BB Butik</h3>
-                  </div>
-                  <div className = "flex justify-end text-2xl text-[#252B42] mr-9 mt-9 gap-6">
-                  <NavLink to=""><FontAwesomeIcon icon={faUser} /></NavLink>
-                  <NavLink to=""><FontAwesomeIcon icon={faMagnifyingGlass} /></NavLink>
-                  <NavLink to=""><FontAwesomeIcon icon={faCartShopping} /></NavLink>
-                  <NavLink to=""><FontAwesomeIcon icon={faBars} /></NavLink>
-                  </div>
-                </div>
-                <div>
-                <nav className = "flex flex-col items-center font-medium my-24 text-3xl gap-8 text-[#737373]">
-                    <NavLink className = "font-normal" to="">Home</NavLink>
-                    <NavLink to="">Product</NavLink>
-                    <NavLink to="">Pricing</NavLink>
-                    <NavLink to="">Contact</NavLink>
-                </nav>
-                </div>
+            <section className = "mobile-nav-section max-sm:hidden">
+                <DesktopHeaderMenu/>
+            </section>
+            <section className = "mobile-nav-section md:hidden">
+                <MobileHeaderMenu/>
             </section>
             <section className = "slide-section">
                 <Slider/>
