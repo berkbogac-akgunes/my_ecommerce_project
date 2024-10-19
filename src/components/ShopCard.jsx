@@ -15,7 +15,7 @@ export function ShopCard(props) {
 
           <div className ="relative mb-8 md:mr-8">
             <img
-            className ="md:h-[31rem] md:w-[15rem] h-[31rem] w-full object-cover" 
+            className ="md:h-[31rem] md:w-[15rem] h-[31rem] w-full object-contain" 
             src = {cardInfo[1].src}
             title= {cardInfo[1].title}
             />

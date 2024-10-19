@@ -1,5 +1,7 @@
 import { ProductCardsGroup } from "@/components/ProductCardsGroup";
 import { ShopCardGroup } from "@/components/ShopCardGroup";
+import { PageContentSlider } from '../components/PageContentSlider';
+import { PageContentLearnMore } from "@/components/PageContentLearnMore";
 
 export function PageContent() {
     return(
@@ -25,6 +27,12 @@ export function PageContent() {
                 <ProductCardsGroup/>
             </div>
         </section>
+        <div className = "">
+                <PageContentSlider/>
+            </div>
+            <div className = "">
+                <PageContentLearnMore/>
+            </div>
         </>
     )
 }
