@@ -2,6 +2,7 @@ import { ProductCardsGroup } from "@/components/ProductCardsGroup";
 import { ShopCardGroup } from "@/components/ShopCardGroup";
 import { PageContentSlider } from '../components/PageContentSlider';
 import { PageContentLearnMore } from "@/components/PageContentLearnMore";
+import { CardSection } from "@/components/CardSection";
 
 export function PageContent() {
     return(
@@ -32,6 +33,9 @@ export function PageContent() {
             </div>
             <div className = "">
                 <PageContentLearnMore/>
+            </div>
+            <div className = "">
+                <CardSection/>
             </div>
         </>
     )
