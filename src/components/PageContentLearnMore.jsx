@@ -3,7 +3,7 @@ import LearnMore from "../assets/images/LearnMore.png"
 export function PageContentLearnMore() {
     return(
         <>
-        <section className = "md:flex md:flex-row-reverse">
+        <section className = "2xl:mx-64 md:flex md:flex-row-reverse">
         <div className = "md:mt-16 md:text-left md:pl-[8rem] md:pr-[12rem] md:w-[45rem] pt-32 w-[100%] flex flex-col items-center text-center mont">
             <div className = "">
             <h4 className = "md:text-left md:w-full font-semibold text-lg mb-9 text-[#BDBDBD]">SUMMER 2020</h4>
