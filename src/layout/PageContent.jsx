@@ -24,7 +24,7 @@ export function PageContent() {
                 <h3 className = "md:w-[40rem] flex flex-wrap justify-center w-[15rem] mont font-bold text-2xl text-[#252B42]">BESTSELLER PRODUCTS</h3>
                 <p className = "md:w-[40rem] flex flex-wrap justify-center w-[16rem] font-normal text-[#737373]">Problems trying to resolve the conflict between </p>
             </div>
-            <div className = "md:flex md:flex-wrap justify-between gap-x-7">
+            <div className = "md:flex md:flex-wrap md:justify-center gap-x-8">
                 <ProductCardsGroup/>
             </div>
         </section>
