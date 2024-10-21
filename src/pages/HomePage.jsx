@@ -1,6 +1,6 @@
-import { PageContent } from "@/homepageLayout/HomePageContent";
-import { Header } from "@/homepageLayout/HomePageHeader";
-import { Footer } from "../components/Footer";
+import { PageContent } from "@/layout/PageContent";
+import { Header } from "@/layout/Header";
+import { Footer } from "@/layout/Footer";
 
 export default function HomePage() {
     return(
