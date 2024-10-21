@@ -4,7 +4,7 @@ export function ProductCard(props) {
     return(
         <>
         <section className = "mt-12">
-          <div className ="md:w-60 flex flex-col text-center items-center">
+          <div className ="md:w-64 flex flex-col text-center items-center">
             <img
             className ="h-[27rem] object-cover pb-4"
             src = {item.src}
