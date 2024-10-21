@@ -18,13 +18,13 @@ export function PageContent() {
             </div>
         </div>
         </section>
-        <section className = "py-20 mx-10 md:mx-60">
+        <section className = "md:flex md:flex-col md:justify-center py-20 mx-10 md:mx-48">
             <div className = "flex flex-col text-center items-center gap-y-2.5">
-                <h4 className = "flex flex-wrap font-normal text-xl text-[#737373]">Featured Products</h4>
-                <h3 className = "flex flex-wrap justify-center w-[15rem] mont font-bold text-2xl text-[#252B42]">BESTSELLER PRODUCTS</h3>
-                <p className = "flex flex-wrap justify-center w-[16rem] font-normal text-[#737373]">Problems trying to resolve the conflict between </p>
+                <h4 className = "md:w-[40rem] flex flex-wrap justify-center font-normal text-xl text-[#737373]">Featured Products</h4>
+                <h3 className = "md:w-[40rem] flex flex-wrap justify-center w-[15rem] mont font-bold text-2xl text-[#252B42]">BESTSELLER PRODUCTS</h3>
+                <p className = "md:w-[40rem] flex flex-wrap justify-center w-[16rem] font-normal text-[#737373]">Problems trying to resolve the conflict between </p>
             </div>
-            <div className = "">
+            <div className = "md:flex md:flex-wrap justify-between gap-x-7">
                 <ProductCardsGroup/>
             </div>
         </section>
@@ -34,7 +34,7 @@ export function PageContent() {
             <div className = "">
                 <PageContentLearnMore/>
             </div>
-            <div className = "">
+            <div className = "md:mx-60">
                 <CardSection/>
             </div>
         </>

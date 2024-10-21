@@ -35,13 +35,15 @@ export function CardSection() {
     return(
         <>
         <div className = "pt-32 w-[100%] flex flex-col items-center text-center mont">
-            <h6 className = "font-semibold text-lg mb-4 text-[#23A6F0]">Practice Advice</h6>
-            <h2 className = "font-bold text-5xl mb-4 w-60 text-[#252B42]">Featured Products</h2>
-            <p className = "flex flex-wrap font-medium text-base mb-9 w-60 text-[#737373]">Problems trying to resolve the conflict between the two major</p>
+            <h6 className = "md:w-[32rem] font-semibold text-lg mb-4 text-[#23A6F0]">Practice Advice</h6>
+            <h2 className = "md:w-[32rem] font-bold text-5xl mb-4 w-60 text-[#252B42]">Featured Products</h2>
+            <p className = "md:w-[32rem] flex flex-wrap font-medium text-base mb-9 w-60 text-[#737373]">Problems trying to resolve the conflict between 
+            the two major realms of Classical physics: Newtonian mechanics </p>
         </div>
 
-        <div className = "flex items-center flex-col mx-10">
-            <div className = "shadow-md h-[38rem] w-full mb-8">
+        <div className = "md:flex md:justify-center">
+        <div className = "md:w-[70rem] md:flex md:flex-row flex items-center flex-col mx-10">
+            <div className = "md:w-[65rem] md:mr-4 shadow-md h-[38rem] w-full mb-8">
                 <img
                   className = "h-[19rem] w-full object-cover"
                   src = {cardInfo[0].src}
@@ -69,7 +71,7 @@ export function CardSection() {
                 </div>
             </div>
 
-            <div className = "shadow-md w-full h-[38rem] mb-8">
+            <div className = "md:w-[65rem] md:mr-4 shadow-md w-full h-[38rem] mb-8">
                 <img
                   className = "h-[19rem] w-full object-cover"
                   src = {cardInfo[1].src}
@@ -97,7 +99,7 @@ export function CardSection() {
                 </div>
             </div>
 
-            <div className = "shadow-md w-full h-[38rem]">
+            <div className = "md:w-[65rem] shadow-md w-full h-[38rem] md:mb-8">
                 <div className = "">
                 <img
                   className = "h-[19rem] w-full object-cover"
@@ -126,6 +128,7 @@ export function CardSection() {
                     <NavLink to = "">Learn More <FontAwesomeIcon icon={faChevronRight} /></NavLink>
                 </div>
             </div>
+        </div>
         </div>
         </>
     )

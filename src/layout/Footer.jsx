@@ -4,9 +4,9 @@ export function Footer() {
     return(
         <>
         <section className = "mt-20 bg-[#FAFAFA] w-full">
-            <div className = "py-10 ml-10">
-            <h3 className = "mont font-bold text-2xl text-[#252B42] mb-3">BB Butik</h3>
-                <div className = "flex">
+            <div className = "md:flex md:justify-between md:pl-32 md:pr-44 py-10 ml-10">
+            <h3 className = "mont font-bold text-2xl text-[#252B42] mb-3 md:pt-4">BB Butik</h3>
+                <div className = "flex md:pt-4">
                 <i className="fa fa-facebook-square text-[#23A6F0] text-2xl mr-5"></i>
                 <i className="fa fa-instagram text-[#23A6F0] text-2xl mr-5"></i>
                 <i className="fa fa-twitter text-[#23A6F0] text-2xl"></i>
@@ -14,7 +14,7 @@ export function Footer() {
             </div>
         </section>
 
-        <section className = "py-16 ml-11">
+        <section className = "py-16 ml-11 md:flex md:flex-row md:justify-around md:mr-28 md:ml-28">
         <div className = "mb-8">
         <h5 className = "font-bold text-lg mb-3 text-[#252B42]">Company Info</h5>
         <div className = "flex flex-col">
@@ -69,8 +69,8 @@ export function Footer() {
         </section>
 
         <section className = "mt-6 bg-[#FAFAFA] w-full">
-            <div className = "py-10 flex justify-center">
-            <h6 className = "flex flex-wrap w-44 text-center mont font-bold text-sm text-[#737373]">Made With Love By Berk Boğaç Akgüneş</h6>
+            <div className = "py-10 flex justify-center md:justify-start md:ml-32">
+            <h6 className = "flex flex-wrap md:flex-nowrap md:w-full w-44 text-center mont font-bold text-sm text-[#737373]">Made With Love By Berk Boğaç Akgüneş</h6>
             </div>
         </section>
         </>
