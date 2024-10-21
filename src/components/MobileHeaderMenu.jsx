@@ -18,7 +18,7 @@ export function MobileHeaderMenu() {
                 </div>
                 <div>
                 <nav className = "flex flex-col items-center font-medium my-24 text-3xl gap-8 text-[#737373]">
-                    <NavLink className = "font-normal" to="/home">Home</NavLink>
+                    <NavLink className = "font-normal" to="/">Home</NavLink>
                     <NavLink to="">Product</NavLink>
                     <NavLink to="">Pricing</NavLink>
                     <NavLink to="">Contact</NavLink>

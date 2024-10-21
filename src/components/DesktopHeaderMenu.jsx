@@ -31,7 +31,7 @@ export function DesktopHeaderMenu() {
             </div>
             <div className = "font-bold flex ml-24 mr-56 gap-x-10">
                 <NavLink to="/home">Home</NavLink>
-                <NavLink className = "font-semibold" to="">Shop</NavLink>
+                <NavLink className = "font-semibold" to="/shop">Shop</NavLink>
                 <NavLink to="">About</NavLink>
                 <NavLink to="">Blog</NavLink>
                 <NavLink to="">Contact</NavLink>
