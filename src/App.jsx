@@ -1,12 +1,15 @@
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Switch, Route } from "react-router-dom"
 import './App.css'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Switch>
+        <Route path="/home">
+          <HomePage />
+        </Route>
+      </Switch>
     </>
   )
 }
