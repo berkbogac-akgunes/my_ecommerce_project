@@ -1,15 +1,16 @@
-import { Switch, Route } from "react-router-dom"
+//import { Switch, Route } from "react-router-dom"
 import './App.css'
 import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <>
-      <Switch>
+    <HomePage/>
+      {/*<Switch>
         <Route path="/home">
           <HomePage />
         </Route>
-      </Switch>
+      </Switch>*/}
     </>
   )
 }
