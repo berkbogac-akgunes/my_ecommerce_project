@@ -8,7 +8,7 @@ import Brand6 from "../assets/images/Brand6.png"
 export function ShopPageBrands() {
     return(
         <>
-        <section className = "brands-section bg-[#FAFAFA] py-24 flex flex-col items-center gap-y-16">
+        <section className = "brands-section bg-[#FAFAFA] py-24 flex flex-col md:flex-row md:justify-between md:py-12 md:px-44 items-center gap-y-16">
         <img src = {Brand1} alt="Brand1" className="h-12 object-contain"/>
         <img src = {Brand2} alt="Brand2" className="h-16 object-contain"/>
         <img src = {Brand3} alt="Brand3" className="h-24 object-contain"/>

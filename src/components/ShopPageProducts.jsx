@@ -19,10 +19,11 @@ export function ShopPageProducts({ direction, ...args }) {
     const toggle = () => setDropdownOpen((prevState) => !prevState);
     return(
         <>
-        <section className = "flex flex-col items-center">
+        <section className = "flex flex-col items-center md:mx-44">
+        <div className = "md:flex md: gap-x-[16rem] md:mt-6">
         <h6 className = "text-[#737373] font-semibold mt-0.5 mb-10 mt-8">Showing all 12 results</h6>
-        <div className = "flex gap-x-6">
-        <h6 className = "text-[#737373] font-semibold mt-0.5 mt-2">Views:</h6>
+        <div className = "flex gap-x-6 md:h-[3rem] md:mt-5">
+        <h6 className = "text-[#737373] font-semibold mt-0.5 mt-2 md:pt-1">Views:</h6>
         <button className = "border rounded-sm py-2 px-3"><FontAwesomeIcon icon={faGrip} /></button>
         <button className = "border rounded-sm py-2 px-3"><FontAwesomeIcon icon={faList} /></button>
         </div>
@@ -38,8 +39,9 @@ export function ShopPageProducts({ direction, ...args }) {
             </div>
             <button className = "bg-[#23A6F0] text-white h-[2.5rem] px-6 rounded font-semibold text-base">Filter</button>
         </div>
-        <section className = "flex flex-col items-center py-20">
-        <div>
+        </div>
+        <section className = "flex flex-col items-center pb-10 pt-4">
+        <div className = "pb-4 md:flex md:flex-wrap md:gap-x-8 md:w-[72rem]">
             <ProductCardsGroup/>
         </div>
         <div>
