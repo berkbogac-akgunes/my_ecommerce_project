@@ -17,8 +17,9 @@ export function ShopPageCategories() {
     ]
     return(
         <section className = "bg-[#FAFAFA]">
-        <section className = "flex flex-col items-center py-7">
-        <h3 className = "mont font-bold text-2xl mb-9 text-[#252B42]">Shop</h3>
+        <div className = "md:mx-44">
+        <section className = "flex flex-col md:flex-row md:justify-between items-center py-7">
+        <h3 className = "md:mb-0 mont font-bold text-2xl mb-9 text-[#252B42]">Shop</h3>
         <div className = "flex py-2.5 gap-x-4">
             <NavLink className = "font-bold" to="">Home</NavLink>
             <FontAwesomeIcon className = "text-[#BDBDBD] mt-1.5 text-sm" icon={faChevronRight} />
@@ -26,13 +27,13 @@ export function ShopPageCategories() {
         </div>
         </section>
 
-        <section className = "py-6 mx-10">
+        <section className = "md:mx-0 py-6 mx-10 md:flex md:flex-row md:gap-x-4">
             {itemInfo.map((item, index) => {
                 return(
                  // eslint-disable-next-line react/jsx-key
                  <div className = "relative mb-4">
-                 <img className = "brightness-75 object-cover h-[19rem] w-[21rem]" src = {itemInfo[index].src} title = {itemInfo[index].title}/>
-                 <div className = "absolute left-[8.5rem] bottom-[8rem]">
+                 <img className = "brightness-75 object-cover md:h-[16rem] h-[19rem] w-[21rem]" src = {itemInfo[index].src} title = {itemInfo[index].title}/>
+                 <div className = "absolute md:left-[4.5rem] md:bottom-[6rem] left-[8.5rem] bottom-[8rem]">
                  <h5 className = "font-bold text-base mr-1.5 text-white">{itemInfo[index].mainTitle}</h5>
                  <h6 className = "text-white font-semibold mt-0.5">{itemInfo[index].total} Items</h6>
                  </div>
@@ -40,6 +41,7 @@ export function ShopPageCategories() {
                 )
             })}
         </section>
+        </div>
         </section>
     )
 }
