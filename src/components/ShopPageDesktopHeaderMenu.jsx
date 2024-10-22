@@ -29,7 +29,7 @@ export function ShopPageDesktopHeaderMenu() {
         <div className = "flex">
                 <h3 className = "font-bold text-2xl">BB Butik</h3>
             </div>
-            <div className = "font-bold flex mr-56 gap-x-10">
+            <div className = "font-bold flex ml-24 mr-56 gap-x-10">
                 <NavLink to="/">Home</NavLink>
                 <NavLink className = "font-semibold" to="">Shop</NavLink>
                 <NavLink to="">About</NavLink>
