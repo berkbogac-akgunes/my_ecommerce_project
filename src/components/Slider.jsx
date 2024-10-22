@@ -1,4 +1,5 @@
 import { CCarousel, CCarouselCaption, CCarouselItem, CImage } from "@coreui/react"
+import { NavLink } from "react-router-dom"
 
 export function Slider() {
 
@@ -11,7 +12,7 @@ export function Slider() {
                         <h5 className = "md:text-lg md:text-start font-bold text-base mb-9">SUMMER 2020</h5>
                         <h2 className = "md:text-6xl md:text-start font-bold text-4xl mb-9">NEW COLLECTION</h2>
                         <h4 className = "md:font-medium md:w-5/12 md:text-start flex flex-wrap font-normal text-xl mb-9">We know how large objects will act, but things on a small scale.</h4>
-                        <button className = "md:w-1/4 md:mb-6 bg-[#2DC071] py-3 px-10 rounded font-bold text-2xl">SHOP NOW</button>
+                        <NavLink className = "md:w-1/4 md:mb-6 bg-[#2DC071] py-3 px-10 rounded font-bold text-2xl" to = "/shop"><button>SHOP NOW</button></NavLink>
                     </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem>
