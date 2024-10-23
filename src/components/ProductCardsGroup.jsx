@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 import product1 from "../assets/images/product1.jpeg"
 import product2 from "../assets/images/product2.jpeg"
 import product3 from "../assets/images/product3.jpeg"
@@ -22,7 +24,7 @@ export function ProductCardsGroup() {
 
     return (
         cardInfo.map((item, index) => {
-            return <ProductCard key={index} item={item}/>
+           return <NavLink key = {index} to = "productdetail"><ProductCard key={index} item={item}/></NavLink>
         })
     )
 }
