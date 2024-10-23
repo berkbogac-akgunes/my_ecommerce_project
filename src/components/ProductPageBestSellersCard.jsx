@@ -3,10 +3,10 @@ export function ProductPageBestSellersCard(props) {
     const {item} = props
     return(
         <>
-        <section className = "bg-white mt-12">
+        <section className = "bg-white mt-12 md:mt-6">
           <div className ="md:w-64 flex flex-col text-center items-center">
             <img
-            className ="h-[30rem] md:w-[15rem] md:h-[19rem] object-cover pb-4"
+            className ="h-[30rem] w-full md:w-[16rem] md:h-[19rem] object-cover pb-4"
             src = {item.src}
             title= {item.title}
             />

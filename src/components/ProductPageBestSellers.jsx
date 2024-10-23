@@ -9,15 +9,20 @@ export function ProductPageBestSellers() {
     ]
     return(
         <>
-        <section className = "bg-[#FAFAFA] px-8 flex flex-col items-center">
-        <h3 className = "mont font-bold text-2xl py-20">BESTSELLER PRODUCTS</h3>
+        <div className = "bg-[#FAFAFA]">
+        <section className = "px-8 flex flex-col items-center md:mx-36 2xl:mx-72">
+        <div className = "md:w-full md:flex md:items-left">
+        <h3 className = "mont font-bold text-2xl md:py-0 md:pb-0 md:pt-10 py-20">BESTSELLER PRODUCTS</h3>
+        </div>
+        <div className="border-b-2 py-2 max-sm:hidden"></div>
         <div className="border-b-2 py-2"></div>
-        <div>
+        <div className = "md:flex md:gap-x-6 2xl:gap-x-20">
         {bestSellersInfo.map((item, index) => {
             return <ProductPageBestSellersCard key={index} item={item}/>
         })}
         </div>
         </section>
+        </div>
         </>
     )
 }
