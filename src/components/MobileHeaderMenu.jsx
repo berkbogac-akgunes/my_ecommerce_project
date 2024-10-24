@@ -21,7 +21,7 @@ export function MobileHeaderMenu() {
                     <NavLink className = "font-normal" to="/">Home</NavLink>
                     <NavLink to="">Product</NavLink>
                     <NavLink to="">Pricing</NavLink>
-                    <NavLink to="">Contact</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
                 </nav>
                 </div>
         </>
