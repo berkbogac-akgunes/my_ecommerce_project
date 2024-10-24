@@ -3,7 +3,8 @@ import './App.css'
 import HomePage from './pages/HomePage'
 import ShopPage from "./pages/ShopPage"
 import { ProductPage } from "./pages/ProductPage"
-import { ContactPage } from "./pages/ContactPage"
+import { TeamPage } from "./pages/TeamPage"
+
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
         <Route path="/productdetail">
           <ProductPage />
         </Route>
-        <Route path="/contact">
-          <ContactPage />
+        <Route path="/team">
+          <TeamPage />
         </Route>
       </Switch>
     </>
