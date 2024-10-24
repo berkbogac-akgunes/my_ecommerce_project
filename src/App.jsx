@@ -5,6 +5,7 @@ import ShopPage from "./pages/ShopPage"
 import { ProductPage } from "./pages/ProductPage"
 import { TeamPage } from "./pages/TeamPage"
 
+
 function App() {
   return (
     <>
