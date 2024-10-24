@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import ShopPage from "./pages/ShopPage"
 import { ProductPage } from "./pages/ProductPage"
 import { TeamPage } from "./pages/TeamPage"
+import { ContactPage } from "./pages/ContactPage"
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path="/productdetail">
           <ProductPage />
+          <Route path="/contact">
+          <ContactPage />
+        </Route>
         </Route>
         <Route path="/team">
           <TeamPage />
