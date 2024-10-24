@@ -18,7 +18,7 @@ function App() {
         <Route path="/productdetail">
           <ProductPage />
         </Route>
-        <Route path="/contact">
+        <Route path="/contactUs">
           <ContactPage />
         </Route>
       </Switch>
