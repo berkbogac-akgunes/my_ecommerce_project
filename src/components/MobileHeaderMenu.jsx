@@ -22,6 +22,7 @@ export function MobileHeaderMenu() {
                     <NavLink to="">Product</NavLink>
                     <NavLink to="">Pricing</NavLink>
                     <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="/team">Team</NavLink>
                 </nav>
                 </div>
         </>

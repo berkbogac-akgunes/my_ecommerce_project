@@ -35,7 +35,7 @@ export function DesktopHeaderMenu() {
                 <NavLink to="">About</NavLink>
                 <NavLink to="">Blog</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
-                <NavLink to="">Pages</NavLink>
+                <NavLink to="/team">Team</NavLink>
             </div>
             <div className = "font-semibold text-[#23A6F0] flex gap-x-2">
                 <FontAwesomeIcon className="mt-1 text-sm" icon={faUser} />
