@@ -19,6 +19,9 @@ function App() {
         <Route path="/productdetail">
           <ProductPage />
         </Route>
+        <Route path="/contactUs">
+          <ContactPage />
+        </Route>
         <Route path="/team">
           <TeamPage />
         </Route>
