@@ -5,6 +5,7 @@ import ShopPage from "./pages/ShopPage"
 import { ProductPage } from "./pages/ProductPage"
 import { TeamPage } from "./pages/TeamPage"
 import { ContactPage } from "./pages/ContactPage"
+import { AboutUs } from "./pages/AboutUsPage"
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/team">
           <TeamPage />
+        </Route>
+        <Route path="/about">
+          <AboutUs />
         </Route>
       </Switch>
     </>
