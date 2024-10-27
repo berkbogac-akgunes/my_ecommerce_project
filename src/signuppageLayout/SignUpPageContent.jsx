@@ -1,5 +1,7 @@
 import { axiosInstance } from '@/helpers/axios';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router';
 
 const roles = [
     { id: 1, name: "Yönetici", code: "admin" },
@@ -9,27 +11,43 @@ const roles = [
 
 export function SignUpPageContent() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
 
     const selectedRole = watch('role');
   
     const onSubmit = async (data) => {
+      setLoading(true)
+  
+      try {
+  
+        const signUpData = {
+          name: data.name,
+          email: data.email,
+          password: data.password,
+          role_id: data.role
+        };
+  
+        if (data.role === 'store') {
+          signUpData.store = {
+            name: data.storeName,
+            phone: data.storePhone,
+            tax_no: data.tax_no,
+            bank_account: data.bank_account
+          };
+        }
 
-      const signUpData = {
-        name: data.name,
-        email: data.email,
-        password: data.password,
-        role: data.role
-      }
-      
-      await axiosInstance.post('/signup', signUpData)
-      .then((response) => {
-        console.log(response)
+        await axiosInstance.post('/signup', signUpData);
+        alert("You need to click the link in your email to activate your account!");
         console.log(signUpData)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+        history.goBack()
+        setLoading(false)
+
+      } catch (err) {
+        console.log(err);
+        alert("Something went wrong. Please try again later.");
       }
+    }
 
     return(
         <section className = "flex flex-col justify-center mx-12 2xl:mx-[40rem] md:mx-[32rem] my-4 md:pt-[4rem] md:pb-[2rem]">
@@ -95,7 +113,7 @@ export function SignUpPageContent() {
         {errors.role && <span className="text-red-400 text-base">This field is required</span>}
       </div>
 
-      {selectedRole === 'store' && (
+      { selectedRole === 'store' && (
         <>
           <div className = "mb-3">
             <label className="block text-base text-[#252B42] font-semibold mb-2">Store Name</label>
@@ -154,9 +172,15 @@ export function SignUpPageContent() {
         </>
       )}
       <div className = "flex justify-center">
-      <button type="submit" className = "bg-[#2DC071] py-2.5 w-[10rem] rounded font-semibold text-xl mt-4">Sign Up</button>
+      <button type="submit" disabled = {loading} className = "bg-[#2DC071] py-2.5 w-[10rem] rounded font-semibold text-xl mt-4">
+        { loading ? (
+          <span className="animate-spin">Processing...</span>):(
+            "Sign Up"
+          )
+        }
+        </button>
       </div>
       </form>
       </section>
     )
-}
+  }
