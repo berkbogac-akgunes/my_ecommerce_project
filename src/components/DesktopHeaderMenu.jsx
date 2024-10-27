@@ -41,7 +41,7 @@ export function DesktopHeaderMenu() {
                 <FontAwesomeIcon className="mt-1 text-sm" icon={faUser} />
                 <NavLink to="">Login</NavLink>
                 <p>/</p>
-                <NavLink className = "mr-12" to="">Register</NavLink>
+                <NavLink className = "mr-12" to="/signup">Register</NavLink>
                 <FontAwesomeIcon className = "mr-7 mt-1" icon={faMagnifyingGlass} />
                 <div className = "flex gap-x-2 mr-7">
                 <FontAwesomeIcon className = "mt-1"icon={faCartShopping} />
