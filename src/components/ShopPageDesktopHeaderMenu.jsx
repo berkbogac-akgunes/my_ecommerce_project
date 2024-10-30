@@ -1,8 +1,11 @@
+import { getGravatarUrl } from "@/helpers/utils/gravatar";
 import { faCartShopping, faEnvelope, faHeart, faMagnifyingGlass, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 export function ShopPageDesktopHeaderMenu() {
+    const user = useSelector((state) => state.client.user);
     return(
         <>
         <section className = "mont bg-[#252B42] text-white h-14 flex items-center justify-between px-9">
@@ -38,10 +41,25 @@ export function ShopPageDesktopHeaderMenu() {
                 <NavLink to="">Pages</NavLink>
             </div>
             <div className = "font-semibold text-[#23A6F0] flex gap-x-2">
+                { user?.name ? 
+                (
+                    <div className="flex items-center space-x-4 mr-12">
+                    <img
+                    src={getGravatarUrl(user.email)}
+                    alt="User avatar"
+                    className="h-8 w-8 rounded-full"
+                    />
+                    <span className="text-sm font-medium text-gray-700">{user.name}</span>
+                    </div>
+                ) :
+                (
+                <div className = "font-semibold text-[#23A6F0] flex gap-x-2">
                 <FontAwesomeIcon className="mt-1 text-sm" icon={faUser} />
-                <NavLink to="">Login</NavLink>
+                <NavLink to="login">Login</NavLink>
                 <p>/</p>
-                <NavLink className = "mr-12" to="">Register</NavLink>
+                <NavLink className = "mr-12" to="/signup">Register</NavLink>
+                </div>
+                )}
                 <FontAwesomeIcon className = "mr-7 mt-1" icon={faMagnifyingGlass} />
                 <div className = "flex gap-x-2 mr-7">
                 <FontAwesomeIcon className = "mt-1"icon={faCartShopping} />
