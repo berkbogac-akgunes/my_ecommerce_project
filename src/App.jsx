@@ -7,6 +7,9 @@ import { TeamPage } from "./pages/TeamPage"
 import { ContactPage } from "./pages/ContactPage"
 import { SignUpPage } from "./pages/SignUpPage"
 import { AboutUs } from "./pages/AboutUsPage"
+import { LoginPage } from "./pages/LoginPage"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -35,7 +38,11 @@ function App() {
         <Route path="/about">
           <AboutUs />
         </Route>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
       </Switch>
+      <ToastContainer />
     </>
   )
 }

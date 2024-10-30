@@ -1,13 +1,21 @@
+import { axiosInstance } from '../../helpers/axios.js';
+import { getGravatarUrl } from '@/helpers/utils/gravatar.js';
+
 export const SET_USER = 'SET_USER'
 export const SET_ROLES = 'SET_ROLES'
 export const SET_THEME = 'SET_THEME'
 export const SET_LANGUAGE = 'SET_LANGUAGE'
 
 
-export const setUser = (user) => ({
-  type: SET_USER,
-  payload: user,
-})
+export function setUser(user) {
+  const gravatarInfo = getGravatarUrl(user.email)
+  return(
+    {
+    type: SET_USER,
+    payload: {...user, gravatarInfo},
+    }
+  )
+  }
     
 export const setRoles = (roles) => ({
   type: SET_ROLES,
@@ -46,4 +54,30 @@ export const fetchRolesIfNeeded = () => {
       }
     }
   };
+};
+
+export const loginThunk = (email, password, rememberMe) => async (dispatch) => {
+  try {
+    const response = await axiosInstance.post('/login', { email, password });
+    const user = response.data;
+
+    // Save token to localStorage
+    if (rememberMe === true) {
+      localStorage.setItem('token', user.token);
+    }
+
+    //Add Gravatar URL to user data after successful login
+     const userWithAvatar = {
+        ...user,
+        avatarUrl: getGravatarUrl(email)
+      };
+
+    // Dispatch the user information to the store
+    dispatch(setUser(user));
+
+    return userWithAvatar
+
+  } catch (error) {
+    throw new Error(error.response.data.message || 'Login failed');
+  }
 };
