@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getGravatarUrl } from "@/helpers/utils/gravatar";
+import ShopDropdownMenu from "./ShopDropDownMenu";
 
 export function DesktopHeaderMenu() {
     const user = useSelector((state) => state.client.user);
@@ -34,7 +35,10 @@ export function DesktopHeaderMenu() {
             </div>
             <div className = "font-bold flex ml-24 mr-56 gap-x-10">
                 <NavLink to="/">Home</NavLink>
-                <NavLink className = "font-semibold" to="/shop">Shop</NavLink>
+                <div className = "font-bold flex">
+                <NavLink to = "/shop">Shop</NavLink>
+                <ShopDropdownMenu />
+                </div>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="">Blog</NavLink>
                 <NavLink to="/contact">Contact</NavLink>

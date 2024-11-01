@@ -44,6 +44,9 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
+        <Route path="/shop/:gender/:category">
+          <ShopPage/>
+        </Route>
       </Switch>
       <ToastContainer />
     </>
