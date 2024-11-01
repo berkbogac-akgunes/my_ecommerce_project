@@ -10,10 +10,13 @@ import { AboutUs } from "./pages/AboutUsPage"
 import { LoginPage } from "./pages/LoginPage"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AutoLogin } from "./helpers/AutoLogin"
 
 
 
 function App() {
+  AutoLogin()
+  
   return (
     <>
       <Switch>

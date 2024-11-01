@@ -16,6 +16,11 @@ export const clientReducer = (state = initialState, action) => {
           ...state,
           user: action.payload,
         };
+      case "LOG_OUT":
+        return {
+          ...state,
+          user: null,
+        };
       case SET_ROLES:
         return {
           ...state,
