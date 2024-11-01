@@ -3,6 +3,7 @@ import { faCartShopping, faEnvelope, faHeart, faMagnifyingGlass, faPhone, faUser
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import ShopDropdownMenu from "./ShopDropDownMenu";
 
 export function ShopPageDesktopHeaderMenu() {
     const user = useSelector((state) => state.client.user);
@@ -34,7 +35,10 @@ export function ShopPageDesktopHeaderMenu() {
             </div>
             <div className = "font-bold flex ml-24 mr-56 gap-x-10">
                 <NavLink to="/">Home</NavLink>
-                <NavLink className = "font-semibold" to="">Shop</NavLink>
+                <div className = "font-bold flex">
+                <NavLink to = "/shop">Shop</NavLink>
+                <ShopDropdownMenu />
+                </div>
                 <NavLink to="">About</NavLink>
                 <NavLink to="">Blog</NavLink>
                 <NavLink to="">Contact</NavLink>
