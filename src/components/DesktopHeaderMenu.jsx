@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getGravatarUrl } from "@/helpers/utils/gravatar";
 import ShopDropdownMenu from "./ShopDropDownMenu";
+import { ProfileDropdown } from "./ProfileDropDown";
 
 export function DesktopHeaderMenu() {
     const user = useSelector((state) => state.client.user);
@@ -54,6 +55,7 @@ export function DesktopHeaderMenu() {
                     className="h-8 w-8 rounded-full"
                     />
                     <span className="text-sm font-medium text-gray-700">{user.name}</span>
+                    <ProfileDropdown/>
                     </div>
                 ) :
                 (

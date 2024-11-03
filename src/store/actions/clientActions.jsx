@@ -17,6 +17,10 @@ export function setUser(user) {
     }
   )
   }
+
+export const logout = () => ({
+  type: LOG_OUT
+})
     
 export const setRoles = (roles) => ({
   type: SET_ROLES,
@@ -80,5 +84,19 @@ export const loginThunk = (email, password, rememberMe) => async (dispatch) => {
 
   } catch (error) {
     throw new Error(error.response.data.message || 'Login failed');
+  }
+};
+
+
+export const logoutThunk = () => async (dispatch) => {
+  try {
+    // Remove token from localStorage
+    localStorage.removeItem('token');
+    
+    delete axiosInstance.defaults.headers.common['Authorization'];
+
+    dispatch(logout());
+  } catch (error) {
+    console.log(error)
   }
 };
