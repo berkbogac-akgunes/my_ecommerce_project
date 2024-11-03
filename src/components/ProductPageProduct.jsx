@@ -1,7 +1,7 @@
 import { ProductPageSlide } from "@/components/ProductPageSlide";
 import { faCartShopping, faChevronRight, faEye, faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink } from "react-router-dom";
 
 export function ProductPageProduct() {
     return(

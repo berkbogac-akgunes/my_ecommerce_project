@@ -11,14 +11,18 @@ import {
   PaginationLink,
 } from 'reactstrap';
 import PropTypes from 'prop-types';
-import { ProductCardsGroup } from "./ProductCardsGroup";
+import { useSelector } from "react-redux";
+import LoadingSpinner from "@/helpers/LoadingSpinner";
+import { ProductCard } from "./ProductCard";
 
 export function ShopPageProducts({ direction, ...args }) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const { loading } = useSelector((state) => state.products);
 
     const toggle = () => setDropdownOpen((prevState) => !prevState);
     return(
         <>
+        {loading && <LoadingSpinner />}
         <section className = "flex flex-col items-center md:mx-44">
         <div className = "md:flex md: gap-x-[16rem] md:mt-6">
         <h6 className = "text-[#737373] font-semibold mt-0.5 mb-10 mt-8">Showing all 12 results</h6>
@@ -42,7 +46,7 @@ export function ShopPageProducts({ direction, ...args }) {
         </div>
         <section className = "flex flex-col items-center pb-10 pt-4">
         <div className = "pb-4 md:flex md:flex-wrap md:gap-x-8 md:w-[72rem]">
-            <ProductCardsGroup/>
+            <ProductCard/>
         </div>
         <div>
             <Pagination
