@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import ShopDropdownMenu from "./ShopDropDownMenu";
+import { ProfileDropdown } from "./ProfileDropDown";
 
 export function ShopPageDesktopHeaderMenu() {
     const user = useSelector((state) => state.client.user);
@@ -54,6 +55,7 @@ export function ShopPageDesktopHeaderMenu() {
                     className="h-8 w-8 rounded-full"
                     />
                     <span className="text-sm font-medium text-gray-700">{user.name}</span>
+                    <ProfileDropdown/>
                     </div>
                 ) :
                 (

@@ -1,8 +1,8 @@
-import { ProductCardsGroup } from "@/components/ProductCardsGroup";
 import { ShopCardGroup } from "@/components/ShopCardGroup";
 import { PageContentSlider } from '../components/PageContentSlider';
 import { PageContentLearnMore } from "@/components/PageContentLearnMore";
 import { CardSection } from "@/components/CardSection";
+import { ProductCard } from "@/components/ProductCard";
 
 export function PageContent() {
     return(
@@ -25,7 +25,7 @@ export function PageContent() {
                 <p className = "md:w-[40rem] flex flex-wrap justify-center w-[16rem] font-normal text-[#737373]">Problems trying to resolve the conflict between </p>
             </div>
             <div className = "md:flex md:flex-wrap md:justify-center md:gap-x-7">
-                <ProductCardsGroup/>
+                <ProductCard/>
             </div>
         </section>
         <div className = "">
