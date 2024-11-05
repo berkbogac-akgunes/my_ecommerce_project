@@ -44,7 +44,7 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
-        <Route path="/shop/:gender/:category">
+        <Route path="/shop/:gender/:category/:categoryId">
           <ShopPage/>
         </Route>
       </Switch>

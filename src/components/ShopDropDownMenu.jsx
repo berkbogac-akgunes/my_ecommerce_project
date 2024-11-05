@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories } from '../store/actions/productActions.jsx';
+import { fetchCategories, handleCategory } from '../store/actions/productActions.jsx';
 import { Link } from 'react-router-dom';
 
 const ShopDropdownMenu = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.products.categories);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleCategoryClick = (gender, categoryName, categoryId) => {
+    dispatch(handleCategory(gender, categoryName, categoryId));
+  };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -57,6 +61,7 @@ const ShopDropdownMenu = () => {
                 <h4 className = "mb-3 mt-1 mont">Kadın</h4>
                 {groupedCategories.kadin.map(category => (
                   <Link
+                    onClick={() => handleCategoryClick(category.gender, category.name, category.id)}
                     key={category.id} 
                     to={`/shop/k/${category.code.split(':')[1]}`}
                     className="dropdown-item mb-1 mont"
@@ -68,7 +73,8 @@ const ShopDropdownMenu = () => {
               <div className="dropdown-section pr-8">
                 <h4 className = "mb-3 mt-1 mont">Erkek</h4>
                 {groupedCategories.erkek.map(category => (
-                  <Link 
+                  <Link
+                    onClick={() => handleCategoryClick(category.gender, category.name, category.id)}
                     key={category.id} 
                     to={`/shop/e/${category.code.split(':')[1]}`}
                     className="dropdown-item mb-1 mont"

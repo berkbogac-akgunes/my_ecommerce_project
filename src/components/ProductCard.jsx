@@ -1,19 +1,38 @@
 import { fetchProducts } from "@/store/actions/productActions";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export function ProductCard() {
-    const dispatch = useDispatch();
-    const { products } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector(state => state.products);
 
-    useEffect(() => {
-      dispatch(fetchProducts());
-    }, [dispatch]);
+  // Fetch products on component mount
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
+    if (loading) {
+      return (
+        <div className="flex justify-center items-center min-h-screen">
+          <span>Loading...</span>
+        </div>
+      );
+    }
+
+    if (error) {
+      return (
+        <div className="text-red-500 p-4 text-center">
+          Error: {error}
+        </div>
+      );
+    }
 
     return (
       products.map((product) => {
         return(
         <>
+        <Link to = {`/products/${product.id}`}>
         <section className = "mt-12">
           <div className ="md:w-64 flex flex-col text-center items-center">
             <img
@@ -40,6 +59,7 @@ export function ProductCard() {
             </div>
           </div>
         </section>
+        </Link>
         </>
         )
       })
